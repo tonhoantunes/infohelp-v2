@@ -114,8 +114,44 @@
                         </div>
                     </div>
                 </div>
+
+
                 <section>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        {% for curso in cursos %}
+
+                            <div class="bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
+                                <div class="relative">
+                                    <div class="w-full h-48 bg-cover bg-center"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzuoJtoOUYsasvzXduVQHmeAh10P20GKYrffksNXSGcyKEDuFqrD0cc-JA0d5I8otkMnCuYjA1VW0nomc8gY6AZ4HDIAicjCD3rLQzo69S61d0ULRUqPRtcRXbgs1Yl_Ywjqcjq3dUYBVShhHbRpmQoboC8zqUEAx1ONN0j-16heshAn0UJaaepE9LZxF8YhDy1EAFcL7Be9DJ8FSC-NGR-heTbkggBez-AjLNVI2H4c4lGmEy1hcJaurYcosNo_pSMXOx-lgLzVk");'>
+                                    </div>
+                                    <div class="absolute top-3 right-3 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded-full">
+                                        {{ curso.categoria }}
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <h3 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                                        {{ curso.titulo }}
+                                    </h3>
+                                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-2 space-x-4">
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="material-symbols-outlined text-base">schedule</span>
+                                            <span>{{ curso.carga_horaria }} h</span>
+                                        </div>
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="material-symbols-outlined text-base">bar_chart</span>
+                                            <span>Avançado DIFU</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% empty %}
+                            <p>Nenhum curso cadastrado ainda.</p>
+                        {% endfor %}
+
+
+
                         <div
                             class="bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
                             <div class="relative">
@@ -142,6 +178,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--
                         <div
                             class="bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
                             <div class="relative">
@@ -324,7 +362,10 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                     </div>
+
+
                     <div class="mt-12 flex justify-center">
                         <nav aria-label="Pagination" class="flex items-center space-x-2">
                             <a class="flex items-center justify-center w-10 h-10 rounded-full text-gray-500 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary"
