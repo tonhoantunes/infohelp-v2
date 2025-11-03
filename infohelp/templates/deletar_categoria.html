@@ -1,0 +1,7 @@
+<h2 class="text-xl font-bold mb-4">Confirmação de exclusão</h2>
+<p>Tem certeza que deseja deletar a categoria <strong>{{ categoria.nome }}</strong>?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">Deletar</button>
+    <a href="{% url 'listar_categorias' %}" class="ml-4 px-4 py-2 rounded bg-gray-300">Cancelar</a>
+</form>
