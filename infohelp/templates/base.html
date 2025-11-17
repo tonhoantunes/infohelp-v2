@@ -50,40 +50,58 @@
 <body>
     <!--Barra de navegação-->
     {% block navbar %}
-        <header class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <div class="flex items-center gap-8">
-                        <div class="flex items-center gap-3 text-primary">
-                            <span class="material-symbols-outlined text-3xl">school</span>
-                            <h2 class="text-xl font-bold text-gray-900 dark:text-white">InfoHelp</h2>
-                        </div>
-                        <nav class="hidden md:flex items-center gap-6">
-                            <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="{% url 'inicio' %}">Início</a>
-                            <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="{% url 'listar_cursos' %}">Cursos</a>
-                            <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="{% url 'biblioteca' %}">Biblioteca</a>
-                        </nav>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="relative hidden sm:block">
-                            <span
-                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
-                            <input
-                                class="form-input rounded-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary/50 focus:border-primary w-full pl-10 pr-4 py-2 text-sm text-gray-900 dark:text-gray-100"
-                                placeholder="Buscar cursos..." type="search" />
-                        </div>
-                        <button
-                            class="hidden sm:flex items-center justify-center rounded-full h-10 px-5 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
-                            Entrar
-                        </button>
-                        <button class="w-10 h-10 rounded-full bg-cover bg-center"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn90S3DHk77amLnctQ25OcM6KJ4X4BGMcJi8uLMuTflN42BtLJlpJFn8ixGWpr-YZdEUkwYqWvVTm-ANpZSo5LFYqRXXOKSPkWqNHI4xN_tSnYV9OElE0lYydgclujLFzmsxI572R6aRjOYj-pTBwv9uIepRwg6dYGN8w_37_5kdgXZ4fTbPNaNwtzEm0AZvQCi5XcPC2bZsKjLwD69Pam_TEL8W0J91um20O9EYYjrPUInxqyPH6juzbR_kyV_q5SCOGnc-IjoHg");'></button>
-                    </div>
+    <header class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- LOGO + MENU -->
+                <div class="flex items-center gap-10">
+                    <a href="{% url 'inicio' %}" class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">InfoHelp</h2>
+                    </a>
+
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="{% url 'inicio' %}">Início</a>
+
+                        <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="{% url 'listar_cursos' %}">Cursos</a>
+
+                        <a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="{% url 'biblioteca' %}">Biblioteca</a>
+                    </nav>
                 </div>
+
+                <!-- BARRA DE BUSCA + BOTÕES -->
+                <div class="flex items-center gap-4">
+
+                    <div class="relative hidden sm:block">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">
+                            search
+                        </span>
+
+                        <input
+                            class="form-input rounded-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary/50 focus:border-primary w-full pl-10 pr-4 py-2 text-sm text-gray-900 dark:text-gray-100"
+                            placeholder="Buscar cursos..." type="search" />
+                    </div>
+
+                    <button
+                        class="hidden sm:flex items-center justify-center rounded-full h-10 px-5 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                        Entrar
+                    </button>
+
+                    <button class="w-10 h-10 rounded-full bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn90S3DHk77amLnctQ25OcM6KJ4X4BGMcJi8uLMuTflN42BtLJlpJFn8ixGWpr-YZdEUkwYqWvVTm-ANpZSo5LFYqRXXOKSPkWqNHI4xN_tSnYV9OElE0lYydgclujLFzmsxI572R6aRjOYj-pTBwv9uIepRwg6dYGN8w_37_5kdgXZ4fTbPNaNwtzEm0AZvQCi5XcPC2bZsKjLwD69Pam_TEL8W0J91um20O9EYYjrPUInxqyPH6juzbR_kyV_q5SCOGnc-IjoHg");'>
+                    </button>
+
+                </div>
+
             </div>
-        </header>
+        </div>
+    </header>
+
     {% endblock navbar %}
 
     <!--Conteúdo-->
