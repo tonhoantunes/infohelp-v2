@@ -22,4 +22,7 @@ urlpatterns = [
     path('login/', views.login, name="login"),
     path('cadastro/', views.cadastro, name="cadastro"),
 
+    #Teste das páginas de gerenciamento
+    path('testecursos/', views.testecursos, name="testecursos"),
+    path('testegerencia/', views.testegerencia, name="testegerencia"),
 ]

@@ -118,3 +118,11 @@ def login(request):
 
 def cadastro(request):
     return render(request, "cadastro.html")
+
+
+#Teste das páginas de gerenciamento
+def testecursos(request):
+    return render(request, "gerencia/cadastrar_curso.html")
+
+def testegerencia(request):
+    return render(request, "gerencia/pagina_gerencia.html")

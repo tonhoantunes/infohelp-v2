@@ -1,0 +1,112 @@
+{% extends "gerencia/base_gerencia.html" %}
+{% load static %}
+
+{% block title %}Exemplo de gerenciamento - InfoHelp{% endblock title %}
+
+{% block content %}
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <!-- PageHeading -->
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+    <h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Gerenciar Níveis de Dificuldade</h1>
+    </div>
+    <!-- Add New Level Section -->
+    <div class="bg-white dark:bg-slate-900/70 p-6 rounded-xl shadow-sm mb-8">
+    <!-- SectionHeader -->
+    <h2 class="text-slate-800 dark:text-slate-200 text-xl font-bold leading-tight tracking-tight mb-4">Adicionar Novo Nível</h2>
+    <div class="flex flex-col items-end gap-4 md:flex-row">
+    <!-- TextField -->
+    <label class="flex w-full flex-col">
+    <p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Nome do Nível</p>
+    <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 h-11 placeholder:text-slate-400 dark:placeholder:text-slate-500 px-3 text-sm font-normal leading-normal" placeholder="Ex: Básico, Intermediário, Avançado" value=""/>
+    </label>
+    <!-- SingleButton -->
+    <button class="flex w-full min-w-[150px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-primary hover:bg-primary/90 text-white text-sm font-bold leading-normal tracking-wide transition-colors duration-200 md:w-auto">
+    <span class="truncate">Adicionar Nível</span>
+    </button>
+    </div>
+    </div>
+    <!-- Existing Levels Section -->
+    <div class="bg-white dark:bg-slate-900/70 rounded-xl shadow-sm">
+    <div class="p-6">
+    <h2 class="text-slate-800 dark:text-slate-200 text-xl font-bold leading-tight tracking-tight">Níveis Existentes</h2>
+    </div>
+    <div class="overflow-x-auto">
+    <table class="w-full text-left">
+    <thead class="border-b border-slate-200 dark:border-slate-800">
+    <tr>
+    <th class="px-6 py-3 text-xs font-semibold uppercase text-slate-500 dark:text-slate-400">ID</th>
+    <th class="px-6 py-3 text-xs font-semibold uppercase text-slate-500 dark:text-slate-400">Nome</th>
+    <th class="px-6 py-3 text-xs font-semibold uppercase text-slate-500 dark:text-slate-400">Data de Criação</th>
+    <th class="px-6 py-3 text-right text-xs font-semibold uppercase text-slate-500 dark:text-slate-400">Ações</th>
+    </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+    <tr>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-500 dark:text-slate-400">1</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-800 dark:text-slate-200">Básico</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm text-slate-600 dark:text-slate-400">15/07/2023</td>
+    <td class="whitespace-nowrap px-6 py-4 text-right">
+    <div class="flex items-center justify-end gap-2">
+    <button class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-300 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
+    </button>
+    <button class="p-2 text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+    </button>
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-500 dark:text-slate-400">2</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-800 dark:text-slate-200">Intermediário</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm text-slate-600 dark:text-slate-400">18/07/2023</td>
+    <td class="whitespace-nowrap px-6 py-4 text-right">
+    <div class="flex items-center justify-end gap-2">
+    <button class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-300 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
+    </button>
+    <button class="p-2 text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+    </button>
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-500 dark:text-slate-400">3</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-800 dark:text-slate-200">Avançado</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm text-slate-600 dark:text-slate-400">22/07/2023</td>
+    <td class="whitespace-nowrap px-6 py-4 text-right">
+    <div class="flex items-center justify-end gap-2">
+    <button class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-300 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
+    </button>
+    <button class="p-2 text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+    </button>
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-500 dark:text-slate-400">4</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-800 dark:text-slate-200">Especialista</td>
+    <td class="whitespace-nowrap px-6 py-4 text-sm text-slate-600 dark:text-slate-400">01/08/2023</td>
+    <td class="whitespace-nowrap px-6 py-4 text-right">
+    <div class="flex items-center justify-end gap-2">
+    <button class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-300 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
+    </button>
+    <button class="p-2 text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+    <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+    </button>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </main>
+{% endblock content %}
