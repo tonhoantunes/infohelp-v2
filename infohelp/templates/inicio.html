@@ -7,7 +7,6 @@
 <body class="bg-background-light dark:bg-background-dark font-display">
     <div class="flex flex-col min-h-screen">
 
-        <!-- Toast de Boas-vindas (aparece apenas uma vez) -->
         <div id="welcomeToast" class="fixed top-20 right-6 z-50 hidden">
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-primary/20 dark:border-primary/30 p-4 pr-12 max-w-sm animate-slide-in">
                 <div class="flex items-center gap-3">
@@ -26,7 +25,6 @@
         <main class="flex-grow">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 
-                <!-- Notificação de Aprovação/Rejeição -->
                 {% if notificacao %}
                     {% if notificacao.status == 'aprovada' %}
                         <div class="mb-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl shadow-2xl overflow-hidden animate-fade-in">
@@ -93,20 +91,18 @@
                     {% endif %}
                 {% endif %}
                 
-                <!-- Hero Section -->
-                <div class="mb-12 relative flex min-h-[400px] flex-col gap-6 rounded-xl bg-cover bg-center bg-no-repeat items-center justify-center p-8 text-center"
-                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEFC8sVM0vXbngItjbTto0T3GtsRBAg9oh_K7LE8Mw3K0-rpdTp0PTX0JKrLseQROqdZm0odJni3pUVQ2JPIQGC2f3uPWvZNwbvru8f6dzastTZqImcODNvVYbde7dA56drHmDJdAOMyypKVyo9GpxkkqpqkBeR-qprpajw3x1wCJfCjP8g0S0NAh6__1mRtRmO3HgnV7a9Q-JqBMjYUsbZGdq_cUcbN5C0ygXZ-183_Yk7lx2C0x-H1tw6cC9CERCdOdjorJiNqk");'>
-                    <div class="flex flex-col gap-4 max-w-2xl">
-                        <h1 class="text-white text-4xl md:text-5xl font-extrabold tracking-tight">
+                <div class="mb-12 relative flex min-h-[400px] flex-col gap-6 rounded-xl bg-cover bg-center bg-no-repeat items-center justify-center p-8 text-center shadow-2xl"
+                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1920&auto=format&fit=crop");'>
+                    <div class="flex flex-col gap-4 max-w-2xl animate-fade-up">
+                        <h1 class="text-white text-4xl md:text-5xl font-extrabold tracking-tight drop-shadow-md">
                             Desbloqueie Seu Potencial Tecnológico
                         </h1>
-                        <p class="text-white/90 text-base md:text-lg">
+                        <p class="text-white/90 text-base md:text-lg drop-shadow-sm">
                             Explore cursos de programação, desenvolvimento web, ciência de dados e muito mais
                         </p>
                     </div>
                 </div>
 
-                <!-- Featured Courses -->
                 <section class="mb-12">
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-bold text-content-light dark:text-content-dark">
@@ -125,7 +121,7 @@
                         <a href="{% url 'listar_aulas' curso.id %}" 
                            class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm border border-primary/10 dark:border-primary/20 hover:shadow-md hover:border-primary/30 dark:hover:border-primary/40 transition-all duration-200">
                             {% if curso.imagem %}
-                            <div class="w-full aspect-video bg-cover bg-center" 
+                            <div class="w-full aspect-video bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
                                  style="background-image: url('{{ curso.imagem.url }}');"></div>
                             {% else %}
                             <div class="w-full aspect-video bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
@@ -165,39 +161,43 @@
                     {% endif %}
                 </section>
 
-                <!-- Popular Categories -->
                 <section class="py-8">
                     <h2 class="text-2xl font-bold text-content-light dark:text-content-dark text-center mb-8">
                         Categorias Populares
                     </h2>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+                        
                         <div class="group flex flex-col items-center gap-3 text-center cursor-pointer animate-fade-up" style="animation-delay: 0.1s;">
-                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDz72T-F0q7VmQCbSJBp5bGEQGxjZ1crlzOlEaDSX5trOJIXDKerx9zSGqXivhpoDeYfUfqGHoXNZJf8udn2inekFsUeM9hHg6I8y6d0QKvgTBTM8SdrHb_MtsuZp3o60NDtv5ab89fXZ9vG5r-GfD8eHDHS5REGCeZxkqly5ZwpFTxOetzsg5G9skTKGTxiJ7LmNN7Efk4bkOX8bkJTRk6zsr32aBwV94MlCQGGym7fUue00a2zdbbCHd5qDKpXQah3p21h1vo7BE");'>
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2 shadow-lg"
+                                style='background-image: url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=400&fit=crop");'>
                             </div>
                             <p class="text-base font-medium text-content-light dark:text-content-dark group-hover:text-primary transition-colors">Programação</p>
                         </div>
+                        
                         <div class="group flex flex-col items-center gap-3 text-center cursor-pointer animate-fade-up" style="animation-delay: 0.2s;">
-                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOY833sYOtIGo340cIGbfqXSLJkDZXRBSHcDEnQUZlK62QHF7ZdD0VTDyPUveyr3Ch7TNod2F3OZI9jpyxZi3dH18yaeNvXm19Eejc_gcnN2PzxYW4R6ga4-h4vihVwJtMIyiLcKXBpUlcRJBlX-GvADVb5nVeUz8nC5sZHGWf7n6i4BEpm7RCQwLE5rDX5CMjAeijBcS6wtQC6G9ULuueIXqlQIFq3dcrboFA1xVG2xHrQppLS4UnqoJA1mAtYnRsApbe69yOqps");'>
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2 shadow-lg"
+                                style='background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop");'>
                             </div>
                             <p class="text-base font-medium text-content-light dark:text-content-dark group-hover:text-primary transition-colors">Ciência de Dados</p>
                         </div>
+                        
                         <div class="group flex flex-col items-center gap-3 text-center cursor-pointer animate-fade-up" style="animation-delay: 0.3s;">
-                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2"
-                                style='background-image: url("https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=400&fit=crop");'>
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2 shadow-lg"
+                                style='background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=400&fit=crop");'>
                             </div>
                             <p class="text-base font-medium text-content-light dark:text-content-dark group-hover:text-primary transition-colors">Desenvolvimento Web</p>
                         </div>
+                        
                         <div class="group flex flex-col items-center gap-3 text-center cursor-pointer animate-fade-up" style="animation-delay: 0.4s;">
-                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBikI3oXpj4ZE7y6dyW-LrKD7xcJZFPZxXLga1MCvlJ6zfa5PWZDpasaEb26YdVpNq5PfT1w-q-0ljE91dvjtR7tj8Uyqi_cpb7C1QtH0rFLBqLIYjowHRuZiv16jzA0P6lAXuGVbtpIHaqpLmSEK41rmP3C77IKIAYprrAFcMKUN2wGMC4Aw75MFYeUh0N2XRlRUtpY-p5SkEMdZKaVEyy3_EhcTC5lnQ_TyAQRg-NqXevpTGBsKCCRgd-mtFugRr2Vnl95lHLTzk");'>
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2 shadow-lg"
+                                style='background-image: url("https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=400&fit=crop");'>
                             </div>
                             <p class="text-base font-medium text-content-light dark:text-content-dark group-hover:text-primary transition-colors">Design Web</p>
                         </div>
+                        
                         <div class="group flex flex-col items-center gap-3 text-center cursor-pointer animate-fade-up" style="animation-delay: 0.5s;">
-                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2"
-                                style='background-image: url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=400&fit=crop");'>
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 group-hover:rotate-2 shadow-lg"
+                                style='background-image: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop");'>
                             </div>
                             <p class="text-base font-medium text-content-light dark:text-content-dark group-hover:text-primary transition-colors">Escritório e Ferramentas Digitais</p>
                         </div>
@@ -208,7 +208,6 @@
 
     </div>
 
-    <!-- Script para Welcome Toast -->
     <script>
         // Verificar se já foi mostrado nesta sessão
         if (!sessionStorage.getItem('welcomeShown')) {
@@ -234,7 +233,6 @@
         }
     </script>
 
-    <!-- Adicionar animação CSS no final -->
     <style>
         @keyframes slide-in {
             from {

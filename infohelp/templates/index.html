@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Tech Academy</title>
+    <title>InfoHelp</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
         rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -41,22 +43,10 @@
             class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
             <div class="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
                 <div class="flex items-center gap-3">
-                    <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_6_319)">
-                            <path
-                                d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
-                                fill="currentColor"></path>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_6_319">
-                                <rect fill="white" height="48" width="48"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">
-                        InfoHelp
-                    </h2>
+                    <a href="{% url 'inicio' %}" class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">InfoHelp</h2>
+                    </a>
                 </div>
                 <nav class="hidden items-center gap-8 md:flex">
                     <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
@@ -105,7 +95,7 @@
                             </div>
                         </div>
                         <div class="h-80 w-full rounded-xl bg-cover bg-center shadow-lg"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk6MlOo1YOlHgkMnqGCXMPrzJI0AI31FQiUgNHRZr6H2_MUlRfIox_W0SFDqymKKK_GRmk4UG3Wm4yDM7QX63OlYKtey5Uw2iE-7zsebaE4XAiKujVzSfnqYnVtmPj9UzeY0b30FfmErws-L6tfUXRzG-TrICZw-ydk6LCcvJzwec7EyX7zzFdkUjZQGWGVbJPNuQ6zNHBl5ZkWviw4gZG427vuvvDZnirETkVZK02U7EfvY6l_d60yfR70xPGB6rTJM6EaY8BN3g");'>
+                            style='background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80");'>
                         </div>
                     </div>
                 </div>
@@ -125,7 +115,7 @@
                         <div
                             class="flex transform flex-col overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:-translate-y-2 dark:bg-gray-800">
                             <div class="h-48 w-full bg-cover bg-center"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5gPA6YOPOwnd5s_-8BYZ00UZbArJRuzgTXFO-hya2ki3fJyJOmJQVuPHva2Z6jxLH27xoK569W-MZEijcldzQf-ApnEBN5-3cecf6Dc2YXtLHN68U2dXa4WzXq9ATl6e6ABNeAohRtkzUku1S_OWfGhMtt4bC0ZgVrInaF_L5JwfOvco6VIfBAW0ENBy9wHChO9liCbpQd48ctyW5kiaKM9cP6X91hp6nVkIULEi1UIXWJ9tt4qboi9elRc-bHKn-yU7NfQPqseM");'>
+                                style='background-image: url("https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");'>
                             </div>
                             <div class="flex-grow p-6">
                                 <h3 class="text-lg font-bold text-gray-900 dark:text-white">
@@ -139,7 +129,7 @@
                         <div
                             class="flex transform flex-col overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:-translate-y-2 dark:bg-gray-800">
                             <div class="h-48 w-full bg-cover bg-center"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxKjVfT2jtBYOSz_6m-oiXyVq8wU3cgcy3BeXmQTBoaTHOBbSSI-UO7hYc_t1iSlciqObUAgbMMfCHy8hgvMjuFSrFaMCM1lQHS3WPAXHRkoj2v1fIWkPexSXMUVQ3mx2ygCgP5Iu2UKyDa7zi2aTJA4o4YnqpRQQJkgWz6Wlk9rFaq1wgbDMN1VW1si60gYLxCx24X1y-3UIvfdAK5mUYLN1b_NImTgGU-DCWRcTA2AZ4rEBEh2I2hRgrRhKq2dk7t8OwS-Zzj_s");'>
+                                style='background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");'>
                             </div>
                             <div class="flex-grow p-6">
                                 <h3 class="text-lg font-bold text-gray-900 dark:text-white">
@@ -154,7 +144,7 @@
                         <div
                             class="flex transform flex-col overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:-translate-y-2 dark:bg-gray-800">
                             <div class="h-48 w-full bg-cover bg-center"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_kP7esCv6Ml-BnanFJzlT0S1kAh2QKeze_hvuUJUm_6DiaTwUi70hGCVMOWU2CQ3HfXZLDt8iLoKZIb9BL291tGooPl4TGZwB96GAUN-opJQH6Es9ACdzrrBotyCA9om81G_qso69IhlDAi5HCWdtnN9O78h_1Ix82nafXFtshesFGNoq9VKMetZej-AdH9j4xNEdp5aSy7abhfiRgDfefcDY2uiJYs6gupvmGJcmqtsYvcgb5uR_wG38JRelKunr3a_sCXSLgBM");'>
+                                style='background-image: url("https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");'>
                             </div>
                             <div class="flex-grow p-6">
                                 <h3 class="text-lg font-bold text-gray-900 dark:text-white">
@@ -184,23 +174,20 @@
                 </div>
             </section>
         </main>
-        <footer class="border-t border-gray-200/50 bg-background-light dark:border-gray-700/50 dark:bg-background-dark">
-            <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-                <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
-                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                            href="#">Sobre nós</a>
-                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                            href="#">Contato</a>
-                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                            href="#">Termos de uso</a>
-                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                            href="#">Política de privacidade</a>
+        <footer class="bg-surface-light dark:bg-surface-dark border-t border-primary/10 dark:border-primary/20 mt-auto">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex justify-center gap-4">
+                        <span class="flex items-center gap-3 text-primary">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                            <h2 class="text-xl font-bold text-gray-900 dark:text-white">InfoHelp</h2>
+                        </span>
                     </div>
-                    <p class="text-center text-sm text-gray-500 dark:text-gray-400">
-                        © 2024 Tech Academy. Todos os direitos reservados.
-                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+                        <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Manual do Usuário</a>
+                    </div>
                 </div>
+                <p class="text-center text-xs text-subtle-light dark:text-subtle-dark mt-6">© 2025 InfoHelp. Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
