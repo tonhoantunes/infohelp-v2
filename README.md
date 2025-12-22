@@ -7,14 +7,14 @@ O **InfoHelp v2** é a segunda versão do sistema [InfoHelp](https://github.com/
 * **Linguagem:** Python 3.11.9 
 * **Framework:** Django 5.2.7 
 * **Banco de Dados:** SQLite (padrão do Django) 
-* **Front-end:** [HTML / CSS / Tailwind CSS / JavaScript]
-* **Outras bibliotecas:** [django-tailwind / (demais dependências listadas no requirements.txt)]
+* **Front-end:** HTML / CSS / Tailwind CSS / JavaScript
+* **Outras bibliotecas:** django-tailwind / demais dependências listadas no requirements.txt
 
 ## Pré-requisitos
 Antes de começar, certifique-se de ter instalado em sua máquina:
 * Python 3.8 ou superior 
 * Git 
-* [MySQL ou PostgreSQL - caso utilize um banco diferente do SQLite]
+* MySQL ou PostgreSQL - caso utilize um banco diferente do SQLite
 
 ## Instalação e Configuração
 
