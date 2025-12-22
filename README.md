@@ -4,17 +4,17 @@
 O **InfoHelp v2** é a segunda versão do sistema [InfoHelp](https://github.com/tonhoantunes/infohelp). Este projeto foi desenvolvido para facilitar o gerenciamento de solicitações e a organização de informações.
 
 ## Tecnologias Utilizadas
-* [cite_start]**Linguagem:** Python 3.11.9 [cite: 5]
-* [cite_start]**Framework:** Django 5.2.7 [cite: 6]
-* [cite_start]**Banco de Dados:** SQLite (padrão do Django) [cite: 7]
+* **Linguagem:** Python 3.11.9 
+* **Framework:** Django 5.2.7 
+* **Banco de Dados:** SQLite (padrão do Django) 
 * **Front-end:** [HTML / CSS / Tailwind CSS / JavaScript]
-* [cite_start]**Outras bibliotecas:** [django-tailwind / (demais dependências listadas no requirements.txt)] [cite: 8]
+* **Outras bibliotecas:** [django-tailwind / (demais dependências listadas no requirements.txt)]
 
 ## Pré-requisitos
 Antes de começar, certifique-se de ter instalado em sua máquina:
-* [cite_start]Python 3.8 ou superior [cite: 10]
-* [cite_start]Git [cite: 12]
-* [cite_start][MySQL ou PostgreSQL - caso utilize um banco diferente do SQLite] [cite: 11]
+* Python 3.8 ou superior 
+* Git 
+* [MySQL ou PostgreSQL - caso utilize um banco diferente do SQLite]
 
 ## Instalação e Configuração
 
