@@ -1,7 +1,7 @@
 # InfoHelp v2
 
 ## Sobre o projeto
-O **InfoHelp v2** é a segunda versão do sistema [Descreva aqui o propósito, ex: de Help Desk / Suporte de TI / Base de Conhecimento]. Este projeto foi desenvolvido para facilitar o gerenciamento de solicitações e a organização de informações.
+O **InfoHelp v2** é a segunda versão do sistema [InfoHelp](https://github.com/tonhoantunes/infohelp). Este projeto foi desenvolvido para facilitar o gerenciamento de solicitações e a organização de informações.
 
 ## Tecnologias Utilizadas
 * [cite_start]**Linguagem:** Python 3.11.9 [cite: 5]
